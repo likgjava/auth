@@ -16,7 +16,8 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import com.likg.common.Constants;
 import com.likg.core.context.FrameBeanFactory;
 
-public class FrameServletContextListener extends ContextLoaderListener implements ServletContextListener, HttpSessionAttributeListener, HttpSessionListener {
+public class FrameServletContextListener extends ContextLoaderListener 
+		implements ServletContextListener, HttpSessionAttributeListener, HttpSessionListener {
 	
 	static Logger log = Logger.getLogger(FrameServletContextListener.class);
 	
@@ -44,31 +45,24 @@ public class FrameServletContextListener extends ContextLoaderListener implement
 			rootpath = rootpath + "/";
 		}
 		Constants.ROOTPATH = rootpath;
+		
 		//获取应用上下文
 		Constants.INITPATH = servletContext.getContextPath();
-		
-		//启动发布程序
-		//new ReleaseArticle().start();
 	}
 
 	public void attributeAdded(HttpSessionBindingEvent arg0) {
-		// TODO Auto-generated method stub
 	}
 
 	public void attributeRemoved(HttpSessionBindingEvent arg0) {
-		// TODO Auto-generated method stub
 	}
 
 	public void attributeReplaced(HttpSessionBindingEvent arg0) {
-		// TODO Auto-generated method stub
 	}
 
 	public void sessionCreated(HttpSessionEvent arg0) {
-		// TODO Auto-generated method stub
 	}
 
 	public void sessionDestroyed(HttpSessionEvent arg0) {
-		// TODO Auto-generated method stub
 	}
 	
 }

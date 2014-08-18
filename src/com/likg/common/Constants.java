@@ -16,7 +16,5 @@ public class Constants {
 	
 	/** 记录操作结果 */
 	public static final String RESULT = "result";
-	
-	
 
 }

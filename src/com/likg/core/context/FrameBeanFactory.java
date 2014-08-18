@@ -3,6 +3,11 @@ package com.likg.core.context;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.context.ApplicationContext;
 
+/**
+ * 框架bean工厂，用于从spring容器中获取bean对象
+ * @author likaige
+ * @create 2014年8月18日 下午2:14:49
+ */
 public class FrameBeanFactory {
 
 	private static ApplicationContext context;
@@ -47,5 +52,4 @@ public class FrameBeanFactory {
 		return BeanFactoryUtils.beanOfType(context, clazz, includeNonSingletons, allowEagerInit);
 	}
 
-	
 }
