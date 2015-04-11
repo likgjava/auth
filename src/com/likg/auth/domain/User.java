@@ -35,7 +35,7 @@ public class User implements BaseObject, UserDetails {
 
 	/**记录号*/
 	@Id
-	@Column(name="USER_ID", length=50)
+	@Column(name="id", length=50)
 	@GeneratedValue(generator="generatorUUID")
 	@GenericGenerator(name="generatorUUID", strategy="uuid")
 	private String objId;
@@ -45,35 +45,35 @@ public class User implements BaseObject, UserDetails {
 	private String userName;
 	
 	/*密码*/
-	@Column(name="USER_PASSWORD", length=50)
+	@Column(name="PASSWORD", length=50)
 	private String password;
 	
 	/*真实姓名*/
-	@Column(name="USER_REAL_NAME", length=20)
+	@Column(name="REAL_NAME", length=20)
 	private String realName;
 	
 	/**邮箱*/
-	@Column(name="USER_EMAIL", length=20)
+	@Column(name="EMAIL", length=20)
 	private String email;
 	
 	/*性别*/
-	@Column(name="USER_SEX", length=1)
+	@Column(name="SEX", length=1)
 	private Boolean sex;
 	
 	/*年龄*/
-	@Column(name="USER_AGE")
+	@Column(name="AGE")
 	private BigDecimal age;
 	
 	/*照片*/
-	@Column(name="USER_PHOTO", length=50)
+	@Column(name="PHOTO", length=50)
 	private String photo;
 	
 	/**是否为管理员(0:不是;1:是)*/
-	@Column(name="USER_IS_ADMIN", length=20)
+	@Column(name="IS_ADMIN", length=20)
 	private String isAdmin;
 	
 	/*使用状态*/
-	@Column(name="USE_STATUS", length=2)
+	@Column(name="STATUS", length=2)
 	private String useStatus;
 	
 	/** 创建时间 */

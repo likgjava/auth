@@ -34,7 +34,7 @@ public class Role implements BaseObject {
 
 	/**记录号*/
 	@Id
-	@Column(name="ROLE_ID", length=50)
+	@Column(name="id", length=50)
 	@GeneratedValue(generator="generatorUUID")
 	@GenericGenerator(name="generatorUUID", strategy="uuid")
 	private String objId;

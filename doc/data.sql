@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : local_db
-Source Server Version : 50018
-Source Host           : localhost:3306
+Source Server Version : 50022
+Source Host           : 127.0.0.1:3306
 Source Database       : auth
 
 Target Server Type    : MYSQL
-Target Server Version : 50018
+Target Server Version : 50022
 File Encoding         : 65001
 
-Date: 2014-10-17 17:16:54
+Date: 2015-04-11 22:04:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -89,7 +89,7 @@ INSERT INTO `auth_resource` VALUES ('R0502', 'R05', '管理中心', 'MemberContr
 -- ----------------------------
 DROP TABLE IF EXISTS `auth_role`;
 CREATE TABLE `auth_role` (
-  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `id` varchar(50) NOT NULL COMMENT '主键',
   `ROLE_NAME` varchar(50) NOT NULL COMMENT '角色名称',
   `ROLE_CH_NAME` varchar(50) default NULL COMMENT '角色中文名称',
   `ROLE_DESC` varchar(100) default NULL COMMENT '角色描述',
@@ -119,6 +119,26 @@ CREATE TABLE `auth_role_resource` (
 -- ----------------------------
 -- Records of auth_role_resource
 -- ----------------------------
+INSERT INTO `auth_role_resource` VALUES ('1', 'R01');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0101');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0102');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0103');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0104');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R03');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0301');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0302');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R04');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0401');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0402');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0403');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0502');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0101');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0103');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0104');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0201');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0301');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0501');
+INSERT INTO `auth_role_resource` VALUES ('2', 'R0502');
 INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R0101');
 INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R0102');
 INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R0103');
@@ -128,33 +148,13 @@ INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R0
 INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R03');
 INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R0301');
 INSERT INTO `auth_role_resource` VALUES ('2c93a0c238b2ad660138b2cf5fc90001', 'R0303');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R01');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0101');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0102');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0103');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0104');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R03');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0301');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0302');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R04');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0401');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0402');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0403');
-INSERT INTO `auth_role_resource` VALUES ('role01', 'R0502');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0101');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0103');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0104');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0201');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0301');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0501');
-INSERT INTO `auth_role_resource` VALUES ('role02', 'R0502');
 
 -- ----------------------------
 -- Table structure for `auth_user`
 -- ----------------------------
 DROP TABLE IF EXISTS `auth_user`;
 CREATE TABLE `auth_user` (
-  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `id` varchar(50) NOT NULL COMMENT '主键',
   `user_name` varchar(20) NOT NULL COMMENT '用户名',
   `password` varchar(50) default NULL COMMENT '密码',
   `real_name` varchar(20) default NULL COMMENT '真实姓名',
@@ -176,6 +176,7 @@ INSERT INTO `auth_user` VALUES ('1', 'test02', '1', '11111', 'fdsaf@11.com', nul
 INSERT INTO `auth_user` VALUES ('2', 'likg', '1', '22222', 'likg.java@163.com', null, null, null, null, null, '2012-07-23 15:12:27');
 INSERT INTO `auth_user` VALUES ('3', 'bb', '1', null, null, null, null, null, null, null, null);
 INSERT INTO `auth_user` VALUES ('4', 'admin', '1', null, '1171602588@qq.com', null, null, null, '1', null, '2012-06-28 06:05:37');
+INSERT INTO `auth_user` VALUES ('402881e84ca8a5a3014ca8a821d50000', 'eqweqw', null, null, 'ewqewq@qq.com', null, null, null, null, null, '2015-04-11 21:25:33');
 INSERT INTO `auth_user` VALUES ('5', 'bbd仿佛三大', null, '张三', null, null, null, null, null, null, null);
 INSERT INTO `auth_user` VALUES ('6', 'libai', null, null, null, null, null, null, null, null, null);
 
@@ -184,8 +185,8 @@ INSERT INTO `auth_user` VALUES ('6', 'libai', null, null, null, null, null, null
 -- ----------------------------
 DROP TABLE IF EXISTS `auth_user_role`;
 CREATE TABLE `auth_user_role` (
-  `USER_ID` int(11) NOT NULL COMMENT '用户id',
-  `ROLE_ID` int(11) NOT NULL COMMENT '角色id',
+  `USER_ID` varchar(50) NOT NULL COMMENT '用户id',
+  `ROLE_ID` varchar(50) NOT NULL COMMENT '角色id',
   PRIMARY KEY  (`USER_ID`,`ROLE_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=gbk ROW_FORMAT=COMPACT;
 
@@ -193,9 +194,9 @@ CREATE TABLE `auth_user_role` (
 -- Records of auth_user_role
 -- ----------------------------
 INSERT INTO `auth_user_role` VALUES ('1', '1');
-INSERT INTO `auth_user_role` VALUES ('5', '1');
-INSERT INTO `auth_user_role` VALUES ('5', '2');
-INSERT INTO `auth_user_role` VALUES ('5', '3');
+INSERT INTO `auth_user_role` VALUES ('4', '1');
+INSERT INTO `auth_user_role` VALUES ('4', '2');
+INSERT INTO `auth_user_role` VALUES ('4', '3');
 INSERT INTO `auth_user_role` VALUES ('6', '1');
 INSERT INTO `auth_user_role` VALUES ('6', '2');
 
@@ -414,146 +415,3 @@ INSERT INTO `goods_class` VALUES ('G0102', 'G01', '笔记本', '', '2', '1', 'us
 INSERT INTO `goods_class` VALUES ('G0103', 'G01', '台式机', '', '2', '1', 'user01', '2012-08-10');
 INSERT INTO `goods_class` VALUES ('G02', null, '男人', '', '1', '0', 'user01', '2012-08-10');
 INSERT INTO `goods_class` VALUES ('G0201', 'G02', '男装', '', '2', '1', 'user01', '2012-08-11');
-
--- ----------------------------
--- Table structure for `t1`
--- ----------------------------
-DROP TABLE IF EXISTS `t1`;
-CREATE TABLE `t1` (
-  `id` int(10) NOT NULL,
-  `value` int(11) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of t1
--- ----------------------------
-INSERT INTO `t1` VALUES ('1', '2');
-INSERT INTO `t1` VALUES ('2', '2');
-INSERT INTO `t1` VALUES ('3', '3');
-INSERT INTO `t1` VALUES ('4', '3');
-INSERT INTO `t1` VALUES ('5', '3');
-
--- ----------------------------
--- Table structure for `t2`
--- ----------------------------
-DROP TABLE IF EXISTS `t2`;
-CREATE TABLE `t2` (
-  `id` int(11) NOT NULL default '0',
-  `name` int(11) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of t2
--- ----------------------------
-INSERT INTO `t2` VALUES ('1', '3');
-
--- ----------------------------
--- Table structure for `test1`
--- ----------------------------
-DROP TABLE IF EXISTS `test1`;
-CREATE TABLE `test1` (
-  `id` int(11) NOT NULL auto_increment,
-  `name` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of test1
--- ----------------------------
-INSERT INTO `test1` VALUES ('1', 'aa');
-INSERT INTO `test1` VALUES ('2', 'bbbbb');
-INSERT INTO `test1` VALUES ('3', 'ccc');
-
--- ----------------------------
--- Table structure for `test2`
--- ----------------------------
-DROP TABLE IF EXISTS `test2`;
-CREATE TABLE `test2` (
-  `id` int(11) NOT NULL auto_increment,
-  `username` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of test2
--- ----------------------------
-INSERT INTO `test2` VALUES ('1', 'aaaa');
-
--- ----------------------------
--- Table structure for `test3`
--- ----------------------------
-DROP TABLE IF EXISTS `test3`;
-CREATE TABLE `test3` (
-  `id` int(11) NOT NULL auto_increment,
-  `name` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of test3
--- ----------------------------
-INSERT INTO `test3` VALUES ('1', 'aaaa');
-INSERT INTO `test3` VALUES ('2', 'bbb');
-INSERT INTO `test3` VALUES ('3', 'cccccccccc');
-
--- ----------------------------
--- Table structure for `test4`
--- ----------------------------
-DROP TABLE IF EXISTS `test4`;
-CREATE TABLE `test4` (
-  `id` int(11) NOT NULL auto_increment,
-  `name` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of test4
--- ----------------------------
-INSERT INTO `test4` VALUES ('1', 'aaa');
-
--- ----------------------------
--- Table structure for `tt`
--- ----------------------------
-DROP TABLE IF EXISTS `tt`;
-CREATE TABLE `tt` (
-  `id` int(11) NOT NULL auto_increment,
-  `type` int(11) default NULL,
-  `time` date default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tt
--- ----------------------------
-INSERT INTO `tt` VALUES ('1', '1', '2014-03-19');
-INSERT INTO `tt` VALUES ('2', '1', '2014-03-20');
-INSERT INTO `tt` VALUES ('3', '1', '2014-03-15');
-INSERT INTO `tt` VALUES ('4', '1', '2014-03-30');
-INSERT INTO `tt` VALUES ('5', '2', '2014-03-02');
-INSERT INTO `tt` VALUES ('6', '2', '2014-03-01');
-INSERT INTO `tt` VALUES ('7', '2', '2014-03-05');
-INSERT INTO `tt` VALUES ('3000', '1', '2014-03-15');
-INSERT INTO `tt` VALUES ('3001', '3', '2014-03-27');
-
--- ----------------------------
--- Table structure for `ttt`
--- ----------------------------
-DROP TABLE IF EXISTS `ttt`;
-CREATE TABLE `ttt` (
-  `id` int(11) NOT NULL auto_increment,
-  `name` varchar(20) default NULL,
-  `sort` int(11) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of ttt
--- ----------------------------
-INSERT INTO `ttt` VALUES ('1', 'java', '1');
-INSERT INTO `ttt` VALUES ('2', 'likg', '8');
-INSERT INTO `ttt` VALUES ('3', 'aa', '5');
-INSERT INTO `ttt` VALUES ('4', null, null);
-INSERT INTO `ttt` VALUES ('5', 'java', null);
-INSERT INTO `ttt` VALUES ('6', null, null);
