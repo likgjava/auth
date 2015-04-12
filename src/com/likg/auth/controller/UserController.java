@@ -21,7 +21,6 @@ import com.likg.security.AuthenticationHelper;
 /**
  * @springmvc.view value="userFormView" url="view/auth/user/user_form.jsp"
  * @springmvc.view value="resourceDetailView" url="view/auth/user/resource_detail.jsp"
- * @springmvc.view value="allotRoleView" url="view/auth/user/allot_role.jsp"
  *
  */
 @Controller

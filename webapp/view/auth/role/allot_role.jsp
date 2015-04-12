@@ -43,7 +43,7 @@ $(document).ready(function() {
 		$('#allotRoleList tbody').find('input[name=allotStatus]:checked').each(function(i,n){
 			roleIds.push($(n).val());
 		});
-		$.getJSON('/RoleController.do?method=allotRole',{userId: $('#userId').val(), roleIds:roleIds},function(json){
+		$.getJSON($('#initPath').val()+'/RoleController.do?method=allotRole',{userId: $('#userId').val(), roleIds:roleIds},function(json){
 			if(json.success){
 				alert('保存成功！');
 				common.closeMsgbox();

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50022
 File Encoding         : 65001
 
-Date: 2015-04-11 22:04:53
+Date: 2015-04-12 08:56:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -50,7 +50,6 @@ INSERT INTO `auth_menu` VALUES ('M0302', 'M03', 'R0302', '商品分类管理', '
 INSERT INTO `auth_menu` VALUES ('M0303', 'M03', 'R0303', '我的商品', '', '2', '1', '', null, null);
 INSERT INTO `auth_menu` VALUES ('M0304', 'M03', 'R0201', 'fdasaaaaaaa', 'fdsaf', '2', '0', 'fdfsa', null, null);
 INSERT INTO `auth_menu` VALUES ('M030401', 'M0304', 'R03', 'fdsa', 'fdsafasf范德萨发撒分', '3', '1', 'fdsa', null, null);
-INSERT INTO `auth_menu` VALUES ('M04', null, 'R01', 'aaa', null, '1', '1', null, null, null);
 
 -- ----------------------------
 -- Table structure for `auth_resource`
@@ -105,6 +104,7 @@ INSERT INTO `auth_role` VALUES ('1', 'admin', '超级管理员', '', null, null)
 INSERT INTO `auth_role` VALUES ('2', 'default', '默认角色', null, null, null);
 INSERT INTO `auth_role` VALUES ('3', 'fdsaf', 'fdsaff', 'sadfasfsaffdsfafaf', null, '2013-07-24 09:27:52');
 INSERT INTO `auth_role` VALUES ('4', 'fdsafsa', null, null, null, null);
+INSERT INTO `auth_role` VALUES ('402881e84cab13de014cab1f74140000', 'q', 'qq', 'qqqq', null, '2015-04-12 08:55:07');
 
 -- ----------------------------
 -- Table structure for `auth_role_resource`
@@ -124,13 +124,9 @@ INSERT INTO `auth_role_resource` VALUES ('1', 'R0101');
 INSERT INTO `auth_role_resource` VALUES ('1', 'R0102');
 INSERT INTO `auth_role_resource` VALUES ('1', 'R0103');
 INSERT INTO `auth_role_resource` VALUES ('1', 'R0104');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R03');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R0301');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R0302');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R04');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R0401');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R0402');
-INSERT INTO `auth_role_resource` VALUES ('1', 'R0403');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R02');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0201');
+INSERT INTO `auth_role_resource` VALUES ('1', 'R0202');
 INSERT INTO `auth_role_resource` VALUES ('1', 'R0502');
 INSERT INTO `auth_role_resource` VALUES ('2', 'R0101');
 INSERT INTO `auth_role_resource` VALUES ('2', 'R0103');
@@ -176,7 +172,6 @@ INSERT INTO `auth_user` VALUES ('1', 'test02', '1', '11111', 'fdsaf@11.com', nul
 INSERT INTO `auth_user` VALUES ('2', 'likg', '1', '22222', 'likg.java@163.com', null, null, null, null, null, '2012-07-23 15:12:27');
 INSERT INTO `auth_user` VALUES ('3', 'bb', '1', null, null, null, null, null, null, null, null);
 INSERT INTO `auth_user` VALUES ('4', 'admin', '1', null, '1171602588@qq.com', null, null, null, '1', null, '2012-06-28 06:05:37');
-INSERT INTO `auth_user` VALUES ('402881e84ca8a5a3014ca8a821d50000', 'eqweqw', null, null, 'ewqewq@qq.com', null, null, null, null, null, '2015-04-11 21:25:33');
 INSERT INTO `auth_user` VALUES ('5', 'bbd仿佛三大', null, '张三', null, null, null, null, null, null, null);
 INSERT INTO `auth_user` VALUES ('6', 'libai', null, null, null, null, null, null, null, null, null);
 
@@ -195,8 +190,6 @@ CREATE TABLE `auth_user_role` (
 -- ----------------------------
 INSERT INTO `auth_user_role` VALUES ('1', '1');
 INSERT INTO `auth_user_role` VALUES ('4', '1');
-INSERT INTO `auth_user_role` VALUES ('4', '2');
-INSERT INTO `auth_user_role` VALUES ('4', '3');
 INSERT INTO `auth_user_role` VALUES ('6', '1');
 INSERT INTO `auth_user_role` VALUES ('6', '2');
 
