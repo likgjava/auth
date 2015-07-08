@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	
 	<context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/action-servlet.xml,/WEB-INF/conf/spring-beans.xml,/WEB-INF/conf/captcha-context.xml,/WEB-INF/conf/spring-security.xml</param-value>
-    </context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring.xml</param-value>
+	</context-param>
 	
 	
 	<!-- 该监听器继承了Spring的ContextLoaderListener监听器，否则需要单独配置ContextLoaderListener监听器 -->
